@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheda F1 2026</title>
+    <style>
+        :root {
+            --f1-red: #e10600;
+            --dark-bg: #15151e;
+            --card-bg: #1f1f27;
+            --text-gray: #d0d0d2;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--dark-bg);
+            color: white;
+            margin: 0;
+            padding: 15px;
+            line-height: 1.5;
+        }
+
+        .header {
+            border-left: 5px solid var(--f1-red);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            color: var(--f1-red);
+            font-weight: bold;
+            margin: 5px 0 0 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #333;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+        .card h2 i {
+            margin-right: 10px;
+            font-style: normal;
+        }
+
+        .card-content {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--f1-red);
+            color: white;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .highlight {
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>F1 2026</h1>
+        <p>Guida Rapida al Nuovo Regolamento</p>
+    </div>
+
+    <div class="card">
+        <span class="badge">Motore</span>
+        <h2><i>🔌</i> Power Unit 50/50</h2>
+        <div class="card-content">
+            <p>Distribuzione equa tra termico ed elettrico. <span class="highlight">Eliminato l'MGU-H</span>. Potenza elettrica potenziata a 350kW (475 CV).</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge">Aero</span>
+        <h2><i>✈️</i> Aerodinamica Attiva</h2>
+        <div class="grid-2 card-content">
+            <div>
+                <span class="highlight">X-MODE:</span><br>
+                Bassa resistenza per i rettilinei.
+            </div>
+            <div>
+                <span class="highlight">Z-MODE:</span><br>
+                Carico massimo per le curve.
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge">Telaio</span>
+        <h2><i>📏</i> Agile Car Concept</h2>
+        <div class="card-content">
+            <ul>
+                <li>Peso: <span class="highlight">-30 kg</span></li>
+                <li>Passo: 3.4m (da 3.6m)</li>
+                <li>Larghezza: 1.9m (da 2m)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge">Sorpassi</span>
+        <h2><i>🚀</i> Manual Override</h2>
+        <div class="card-content">
+            <p>Sostituisce la logica del DRS tradizionale con un <span class="highlight">boost di energia elettrica</span> disponibile per chi insegue, facilitando i sorpassi ravvicinati.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge">Ambiente</span>
+        <h2><i>🌿</i> Carburanti 100% Green</h2>
+        <div class="card-content">
+            <p>Introduzione di carburanti Drop-in completamente sostenibili. Obiettivo Net Zero Carbon entro il 2030.</p>
+        </div>
+    </div>
+
+</body>
+</html>
