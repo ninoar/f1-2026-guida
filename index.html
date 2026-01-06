@@ -2,12 +2,20 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F1 2026: Guida & Calendario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="F1 2026">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#e10600">
+    
+    <title>F1 2026 Quick Guide</title>
+    
     <style>
         :root {
             --f1-red: #e10600;
-            --dark-bg: #15151e;
+            --dark-bg: #0b0b10;
             --card-bg: #1f1f27;
             --text-gray: #d0d0d2;
             --accent-blue: #00d2be;
@@ -18,18 +26,20 @@
             background-color: var(--dark-bg);
             color: white;
             margin: 0;
-            padding: 10px;
+            padding: env(safe-area-inset-top) 15px 40px 15px;
             line-height: 1.4;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .header {
             border-left: 5px solid var(--f1-red);
             padding-left: 15px;
-            margin: 15px 0 25px 5px;
+            margin: 20px 0 25px 5px;
         }
 
         .header h1 {
-            font-size: 22px;
+            font-size: 24px;
             margin: 0;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -39,15 +49,16 @@
             color: var(--f1-red);
             font-size: 14px;
             font-weight: bold;
-            margin: 5px 0 0 0;
+            margin: 0;
         }
 
         .card {
             background: var(--card-bg);
-            border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 15px;
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 16px;
             border: 1px solid #333;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
         .card h2 {
@@ -57,12 +68,10 @@
             align-items: center;
             color: #fff;
             border-bottom: 1px solid #333;
-            padding-bottom: 8px;
+            padding-bottom: 10px;
         }
 
         .card h2 i { margin-right: 10px; font-style: normal; }
-
-        .card-content { font-size: 13px; color: var(--text-gray); margin-top: 10px; }
 
         .badge {
             display: inline-block;
@@ -73,32 +82,46 @@
             border-radius: 4px;
             margin-bottom: 8px;
             text-transform: uppercase;
+            font-weight: bold;
         }
 
         .highlight { color: #fff; font-weight: bold; }
 
-        /* Stile Tabelle */
-        table { width: 100%; border-collapse: collapse; font-size: 12px; }
-        th { text-align: left; color: var(--f1-red); padding-bottom: 5px; border-bottom: 1px solid #444; }
-        td { padding: 6px 0; border-bottom: 1px solid #2a2a35; }
-        .date-col { width: 80px; color: #888; }
+        table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        th { text-align: left; color: var(--f1-red); padding-bottom: 8px; border-bottom: 1px solid #444; }
+        td { padding: 10px 0; border-bottom: 1px solid #2a2a35; }
+        
+        .date-col { width: 70px; color: #888; font-variant-numeric: tabular-nums; }
 
-        /* Scrolling per calendario lungo */
-        .scroll-container { max-height: 400px; overflow-y: auto; padding-right: 5px; }
+        .scroll-container {
+            max-height: 380px;
+            overflow-y: auto;
+            padding-right: 5px;
+            -webkit-overflow-scrolling: touch;
+        }
+
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; }
+
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #555;
+            padding: 20px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
 
     <div class="header">
         <h1>F1 2026</h1>
-        <p>Regolamento & Calendario</p>
+        <p>WEB APP GUIDE</p>
     </div>
 
     <div class="card">
-        <span class="badge">Programma 2026</span>
-        <h2><i>📅</i> Calendario Mondiale</h2>
+        <span class="badge">Calendario Ufficiale</span>
+        <h2><i>📅</i> Mondiale 2026</h2>
         <div class="scroll-container">
             <table>
                 <thead>
@@ -108,63 +131,64 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td class="date-col">15 Mar</td><td>🇦🇺 Australia (Melbourne)</td></tr>
-                    <tr><td class="date-col">22 Mar</td><td>🇨🇳 Cina (Shanghai)</td></tr>
-                    <tr><td class="date-col">5 Apr</td><td>🇯🇵 Giappone (Suzuka)</td></tr>
-                    <tr><td class="date-col">19 Apr</td><td>🇧🇭 Bahrain (Sakhir)</td></tr>
-                    <tr><td class="date-col">26 Apr</td><td>🇸🇦 Arabia Saudita (Jeddah)</td></tr>
+                    <tr><td class="date-col">15 Mar</td><td>🇦🇺 Australia</td></tr>
+                    <tr><td class="date-col">22 Mar</td><td>🇨🇳 Cina</td></tr>
+                    <tr><td class="date-col">05 Apr</td><td>🇯🇵 Giappone</td></tr>
+                    <tr><td class="date-col">19 Apr</td><td>🇧🇭 Bahrain</td></tr>
+                    <tr><td class="date-col">26 Apr</td><td>🇸🇦 Arabia Saudita</td></tr>
                     <tr><td class="date-col">10 Mag</td><td>🇺🇸 Miami</td></tr>
-                    <tr><td class="date-col">17 Mag</td><td>🇮🇹 Emilia-Romagna (Imola)</td></tr>
+                    <tr><td class="date-col">17 Mag</td><td>🇮🇹 Emilia-Romagna</td></tr>
                     <tr><td class="date-col">24 Mag</td><td>🇲🇨 Monaco</td></tr>
-                    <tr><td class="date-col">7 Giu</td><td>🇪🇸 Spagna (<span style="color:var(--accent-blue)">Madrid</span>)</td></tr>
-                    <tr><td class="date-col">14 Giu</td><td>🇨🇦 Canada (Montreal)</td></tr>
-                    <tr><td class="date-col">28 Giu</td><td>🇦🇹 Austria (Spielberg)</td></tr>
-                    <tr><td class="date-col">5 Lug</td><td>🇬🇧 Regno Unito (Silverstone)</td></tr>
-                    <tr><td class="date-col">26 Lug</td><td>🇧🇪 Belgio (Spa)</td></tr>
-                    <tr><td class="date-col">2 Ago</td><td>🇭🇺 Ungheria (Hungaroring)</td></tr>
-                    <tr><td class="date-col">30 Ago</td><td>🇳🇱 Olanda (Zandvoort)</td></tr>
-                    <tr><td class="date-col">6 Set</td><td>🇮🇹 Italia (Monza)</td></tr>
-                    <tr><td class="date-col">20 Set</td><td>🇦🇿 Azerbaijan (Baku)</td></tr>
-                    <tr><td class="date-col">4 Ott</td><td>🇸🇬 Singapore</td></tr>
-                    <tr><td class="date-col">18 Ott</td><td>🇺🇸 Stati Uniti (Austin)</td></tr>
+                    <tr><td class="date-col">07 Giu</td><td>🇪🇸 Spagna (<span class="highlight" style="color:var(--accent-blue)">Madrid</span>)</td></tr>
+                    <tr><td class="date-col">14 Giu</td><td>🇨🇦 Canada</td></tr>
+                    <tr><td class="date-col">28 Giu</td><td>🇦🇹 Austria</td></tr>
+                    <tr><td class="date-col">05 Lug</td><td>🇬🇧 Regno Unito</td></tr>
+                    <tr><td class="date-col">26 Lug</td><td>🇧🇪 Belgio</td></tr>
+                    <tr><td class="date-col">02 Ago</td><td>🇭🇺 Ungheria</td></tr>
+                    <tr><td class="date-col">30 Ago</td><td>🇳🇱 Olanda</td></tr>
+                    <tr><td class="date-col">06 Set</td><td>🇮🇹 Italia (Monza)</td></tr>
+                    <tr><td class="date-col">20 Set</td><td>🇦🇿 Azerbaijan</td></tr>
+                    <tr><td class="date-col">04 Ott</td><td>🇸🇬 Singapore</td></tr>
+                    <tr><td class="date-col">18 Ott</td><td>🇺🇸 Austin</td></tr>
                     <tr><td class="date-col">25 Ott</td><td>🇲🇽 Messico</td></tr>
-                    <tr><td class="date-col">8 Nov</td><td>🇧🇷 Brasile (Interlagos)</td></tr>
+                    <tr><td class="date-col">08 Nov</td><td>🇧🇷 Brasile</td></tr>
                     <tr><td class="date-col">22 Nov</td><td>🇺🇸 Las Vegas</td></tr>
-                    <tr><td class="date-col">29 Nov</td><td>🇶🇦 Qatar (Lusail)</td></tr>
-                    <tr><td class="date-col">6 Dic</td><td>🇦🇪 Abu Dhabi (Yas Marina)</td></tr>
+                    <tr><td class="date-col">29 Nov</td><td>🇶🇦 Qatar</td></tr>
+                    <tr><td class="date-col">06 Dic</td><td>🇦🇪 Abu Dhabi</td></tr>
                 </tbody>
             </table>
         </div>
-        <p style="font-size: 10px; color: #666; margin-top: 10px;">* Madrid debutta come nuova sede del GP di Spagna.</p>
     </div>
 
     <div class="card">
-        <span class="badge">Team</span>
+        <span class="badge">Team & Motori</span>
         <h2><i>🏎️</i> Power Units 2026</h2>
-        <div class="card-content">
-            <table>
-                <tr><td>Red Bull / RB</td><td class="highlight">Ford-RBPT</td></tr>
-                <tr><td>Ferrari</td><td class="highlight">Ferrari</td></tr>
-                <tr><td>Mercedes / McLaren</td><td class="highlight">Mercedes</td></tr>
-                <tr><td>Audi (Sauber)</td><td class="highlight">Audi</td></tr>
-                <tr><td>Aston Martin</td><td class="highlight">Honda</td></tr>
-            </table>
-        </div>
+        <table>
+            <tr><td>Red Bull / RB</td><td class="highlight">Ford-RBPT</td></tr>
+            <tr><td>Ferrari</td><td class="highlight">Ferrari</td></tr>
+            <tr><td>Mercedes / McLaren</td><td class="highlight">Mercedes</td></tr>
+            <tr><td>Audi (Sauber)</td><td class="highlight">Audi</td></tr>
+            <tr><td>Aston Martin</td><td class="highlight">Honda</td></tr>
+            <tr><td>Alpine</td><td class="highlight">Mercedes (?)</td></tr>
+            <tr><td>Haas</td><td class="highlight">Ferrari</td></tr>
+        </table>
     </div>
 
     <div class="card">
-        <span class="badge">Tecnica</span>
-        <h2><i>🛠️</i> Novità Principali</h2>
-        <div class="card-content">
-            <p>• <span class="highlight">Motore:</span> 50% termico, 50% elettrico (350kW).</p>
-            <p>• <span class="highlight">Aero:</span> Ali mobili anteriori e posteriori (X-Mode/Z-Mode).</p>
-            <p>• <span class="highlight">Peso:</span> -30kg per auto più agili.</p>
-            <p>• <span class="highlight">Override:</span> Boost elettrico per i sorpassi.</p>
+        <span class="badge">Regolamento Tecnico</span>
+        <h2><i>🛠️</i> Cosa cambia</h2>
+        <div style="font-size: 13px; color: var(--text-gray);">
+            <p>• <span class="highlight">MGU-H rimosso:</span> Motori più semplici.</p>
+            <p>• <span class="highlight">Potenza Elettrica:</span> Sale a 350kW (475 CV).</p>
+            <p>• <span class="highlight">Aero Attiva:</span> Ali mobili anteriori e posteriori.</p>
+            <p>• <span class="highlight">Carburante:</span> 100% Sostenibile.</p>
+            <p>• <span class="highlight">Peso:</span> Ridotto di 30kg (768kg).</p>
         </div>
     </div>
 
-    <div class="footer" style="text-align: center; font-size: 10px; color: #555; padding: 20px;">
-        F1® 2026 Quick Guide | Aggiornato Gennaio 2026
+    <div class="footer">
+        F1® Quick Guide Mobile 2026<br>
+        Versione 1.2 - Gennaio 2026
     </div>
 
 </body>
