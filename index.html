@@ -10,6 +10,7 @@
             --dark-bg: #15151e;
             --card-bg: #1f1f27;
             --text-gray: #d0d0d2;
+            --accent-blue: #00d2be;
         }
 
         body {
@@ -54,6 +55,8 @@
             display: flex;
             align-items: center;
             color: #fff;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
         }
 
         .card h2 i {
@@ -64,6 +67,7 @@
         .card-content {
             font-size: 14px;
             color: var(--text-gray);
+            margin-top: 10px;
         }
 
         .badge {
@@ -87,6 +91,23 @@
             color: #fff;
             font-weight: bold;
         }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th { text-align: left; color: var(--f1-red); padding-bottom: 5px; }
+        td { padding: 5px 0; border-bottom: 1px solid #2a2a35; }
+
+        .footer {
+            text-align: center;
+            font-size: 10px;
+            color: #555;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -101,6 +122,29 @@
         <h2><i>🔌</i> Power Unit 50/50</h2>
         <div class="card-content">
             <p>Distribuzione equa tra termico ed elettrico. <span class="highlight">Eliminato l'MGU-H</span>. Potenza elettrica potenziata a 350kW (475 CV).</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge">Protagonisti</span>
+        <h2><i>🏎️</i> Team & Power Units</h2>
+        <div class="card-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team</th>
+                        <th>Motore 2026</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Red Bull / RB</td><td class="highlight">Ford-RBPT</td></tr>
+                    <tr><td>Ferrari</td><td class="highlight">Ferrari</td></tr>
+                    <tr><td>Mercedes / McLaren</td><td class="highlight">Mercedes</td></tr>
+                    <tr><td>Audi (ex Sauber)</td><td class="highlight">Audi</td></tr>
+                    <tr><td>Aston Martin</td><td class="highlight">Honda</td></tr>
+                    <tr><td>Alpine</td><td class="highlight">Mercedes (?)</td></tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
@@ -120,13 +164,23 @@
     </div>
 
     <div class="card">
+        <span class="badge">Calendario</span>
+        <h2><i>📍</i> Novità Circuiti</h2>
+        <div class="card-content">
+            <p><span class="highlight">Madrid:</span> Debutto del GP di Spagna sul circuito cittadino semi-permanente.</p>
+            <p><span class="highlight">Sostenibilità:</span> Logistica ottimizzata per raggruppare le gare per area geografica e ridurre le emissioni.</p>
+        </div>
+    </div>
+
+    <div class="card">
         <span class="badge">Telaio</span>
         <h2><i>📏</i> Agile Car Concept</h2>
         <div class="card-content">
             <ul>
-                <li>Peso: <span class="highlight">-30 kg</span></li>
-                <li>Passo: 3.4m (da 3.6m)</li>
-                <li>Larghezza: 1.9m (da 2m)</li>
+                <li>Peso: <span class="highlight">-30 kg</span> (768kg totali)</li>
+                <li>Passo: 3.4m (ridotto di 20cm)</li>
+                <li>Larghezza: 1.9m (ridotta di 10cm)</li>
+                <li>Pneumatici: 18" (più stretti)</li>
             </ul>
         </div>
     </div>
@@ -135,16 +189,13 @@
         <span class="badge">Sorpassi</span>
         <h2><i>🚀</i> Manual Override</h2>
         <div class="card-content">
-            <p>Sostituisce la logica del DRS tradizionale con un <span class="highlight">boost di energia elettrica</span> disponibile per chi insegue, facilitando i sorpassi ravvicinati.</p>
+            <p>Sostituisce la logica del DRS tradizionale con un <span class="highlight">boost di energia elettrica</span> disponibile per chi insegue, facilitando i sorpassi ravvicinati tramite gestione attiva dell'energia.</p>
         </div>
     </div>
 
-    <div class="card">
-        <span class="badge">Ambiente</span>
-        <h2><i>🌿</i> Carburanti 100% Green</h2>
-        <div class="card-content">
-            <p>Introduzione di carburanti Drop-in completamente sostenibili. Obiettivo Net Zero Carbon entro il 2030.</p>
-        </div>
+    <div class="footer">
+        Dati aggiornati basati sui regolamenti FIA 2026 <br>
+        Creato per consultazione rapida mobile.
     </div>
 
 </body>
